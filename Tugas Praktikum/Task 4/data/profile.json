@@ -1,0 +1,16 @@
+{
+  "profil": {
+    "inisial": "MS",
+    "nama": "Muhammad Miqdar Salim",
+    "prodi": "Teknik Informatika",
+    "bio": "Seseorang yang gemar dengan teknologi dan suka sekali dengan reverse engineering.",
+    "email": "muhammad.miqdar.tif25@polban.ac.id",
+    "lokasi": "Bekasi"
+  },
+  "keterampilan": [
+    { "nama": "ASM", "level": "Menengah" },
+    { "nama": "C++", "level": "Dasar" },
+    { "nama": "JavaScript", "level": "Dasar" },
+    { "nama": "Git", "level": "Dasar" }
+  ]
+}

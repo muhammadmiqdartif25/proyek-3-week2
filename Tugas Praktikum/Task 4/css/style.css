@@ -1,0 +1,224 @@
+:root {
+  --latar: #f5f5f2;
+  --permukaan: #ffffff;
+  --teks: #1a1a18;
+  --teks-redup: #57574f;
+  --garis: #dedcd4;
+  --aksen: #1f6f5c;
+  --aksen-hover: #185a4a;
+  --aksen-teks: #1a6b58;
+  --gagal: #a4231a;
+}
+
+[data-tema="gelap"] {
+  --latar: #16161a;
+  --permukaan: #1e1e22;
+  --teks: #eceae5;
+  --teks-redup: #a6a69e;
+  --garis: #33333a;
+  --aksen: #26795f;
+  --aksen-hover: #2a8163;
+  --aksen-teks: #7fc7ae;
+  --gagal: #ff9d92;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html [hidden] {
+  display: none;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui;
+  line-height: 1.6;
+  color: var(--teks);
+  background: var(--latar);
+  padding-block: 48px;
+}
+
+.container {
+  width: min(92%, 640px);
+  margin-inline: auto;
+}
+
+header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+h2 {
+  font-size: 1.125rem;
+}
+
+#status[data-state="loading"] {
+  color: var(--teks-redup);
+}
+
+#status[data-state="error"] {
+  color: var(--gagal);
+}
+
+.kartu,
+#daftar-keterampilan li,
+form {
+  padding: 16px;
+  border-radius: 12px;
+  background: var(--permukaan);
+}
+
+.kartu,
+form {
+  margin-bottom: 16px;
+}
+
+.avatar {
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 10px;
+  background: var(--aksen);
+  color: #ffffff;
+  font-weight: 600;
+}
+
+#nama {
+  margin: 12px 0 0;
+}
+
+#prodi,
+.detail dt,
+.level {
+  color: var(--teks-redup);
+  font-size: 0.875rem;
+}
+
+.detail {
+  display: none;
+  margin: 16px 0 0;
+}
+
+.detail.terbuka {
+  display: block;
+}
+
+.detail dd {
+  margin: 0 0 8px;
+  overflow-wrap: anywhere;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+input,
+select {
+  min-height: 44px;
+  padding: 10px 12px;
+  border: 1px solid var(--garis);
+  border-radius: 8px;
+  background: var(--permukaan);
+  color: var(--teks);
+  font: inherit;
+}
+
+#input-keterampilan {
+  flex: 1 1 150px;
+  min-width: 0;
+}
+
+#pilih-level {
+  flex: 0 0 auto;
+}
+
+#pesan-form {
+  flex: 1 1 100%;
+  margin: 0;
+  color: var(--gagal);
+  font-size: 0.875rem;
+}
+
+#pesan-form:empty {
+  display: none;
+}
+
+#pesan-kosong {
+  color: var(--teks-redup);
+}
+
+#daftar-keterampilan {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 8px;
+}
+
+#daftar-keterampilan li {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+
+#daftar-keterampilan .tombol {
+  margin: 0 0 0 auto;
+}
+
+.tombol {
+  min-height: 44px;
+  padding: 10px 16px;
+  border: 1px solid var(--garis);
+  border-radius: 8px;
+  background: var(--permukaan);
+  color: var(--aksen-teks);
+  font: inherit;
+  cursor: pointer;
+  transition:
+    background-color 0.15s ease,
+    border-color 0.15s ease,
+    color 0.15s ease;
+}
+
+.tombol:hover {
+  background: var(--latar);
+  border-color: var(--aksen-teks);
+}
+
+#tombol-tema,
+form .tombol {
+  background: var(--aksen);
+  color: #ffffff;
+  border-color: var(--aksen);
+}
+
+#tombol-tema:hover,
+form .tombol:hover {
+  background: var(--aksen-hover);
+  border-color: var(--aksen-hover);
+}
+
+.tombol:active {
+  transform: translateY(1px);
+}
+
+.tombol:focus-visible,
+input:focus-visible,
+select:focus-visible {
+  outline: 2px solid var(--aksen-teks);
+  outline-offset: 2px;
+}

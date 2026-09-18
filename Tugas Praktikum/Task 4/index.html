@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="id" data-tema="terang">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Interactive Profile Card</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="container">
+      <h1>Interactive Profile Card</h1>
+      <button id="tombol-tema" class="tombol" type="button">Mode gelap</button>
+    </header>
+
+    <main class="container">
+      <p id="status" role="status" data-state="loading">
+        Memuat data profil...
+      </p>
+      <button id="coba-lagi" class="tombol" type="button" hidden>
+        Coba Lagi
+      </button>
+
+      <article id="kartu-profil" class="kartu" hidden>
+        <span id="avatar" class="avatar" aria-hidden="true"></span>
+        <h2 id="nama"></h2>
+        <p id="prodi"></p>
+        <button
+          id="tombol-detail"
+          class="tombol"
+          type="button"
+          aria-expanded="false"
+        >
+          Lihat detail
+        </button>
+        <dl id="panel-detail" class="detail">
+          <dt>Bio</dt>
+          <dd id="bio"></dd>
+          <dt>Email</dt>
+          <dd id="email"></dd>
+          <dt>Lokasi</dt>
+          <dd id="lokasi"></dd>
+        </dl>
+      </article>
+
+      <section id="bagian-keterampilan" hidden>
+        <h2 id="judul-keterampilan">Keterampilan</h2>
+
+        <form id="form-keterampilan" novalidate>
+          <input
+            id="input-keterampilan"
+            type="text"
+            placeholder="Contoh: Python"
+            autocomplete="off"
+            aria-label="Nama keterampilan"
+            aria-describedby="pesan-form"
+          />
+          <select id="pilih-level" aria-label="Level keterampilan">
+            <option value="Dasar" selected>Dasar</option>
+            <option value="Menengah">Menengah</option>
+            <option value="Lanjut">Lanjut</option>
+          </select>
+          <button class="tombol" type="submit">Tambah</button>
+          <p id="pesan-form" role="alert"></p>
+        </form>
+
+        <p id="pesan-kosong" hidden>
+          Belum ada keterampilan. Tambahkan lewat form di atas.
+        </p>
+
+        <ul id="daftar-keterampilan"></ul>
+      </section>
+    </main>
+    <script src="js/app.js" defer></script>
+  </body>
+</html>

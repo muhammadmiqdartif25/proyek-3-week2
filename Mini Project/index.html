@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>WebStarter - Belajar Web dari Nol</title>
+  </head>
+  <body>
+    <a class="lewati" href="#konten-utama">Lewati ke konten utama</a>
+
+    <header>
+      <h1>WebStarter</h1>
+
+      <button
+        id="tombol-nav"
+        class="tombol tombol-nav"
+        type="button"
+        aria-expanded="false"
+        aria-controls="menu-utama"
+      >
+        <span class="ikon-nav" aria-hidden="true"></span>
+        Menu
+      </button>
+
+      <nav id="menu-utama" class="menu-utama" aria-label="Navigasi utama">
+        <a class="nav-link" href="#learning">Materi</a>
+        <a class="nav-link" href="#features">Fitur</a>
+        <a class="nav-link" href="#faq">FAQ</a>
+        <a class="nav-link btn" href="#kontak">Daftar</a>
+      </nav>
+
+      <button
+        id="tombol-tema"
+        class="tombol"
+        type="button"
+        aria-pressed="false"
+      >
+        Mode gelap
+      </button>
+
+      <hr />
+    </header>
+
+    <main id="konten-utama" class="container">
+      <section class="hero">
+        <header class="hero-content">
+          <h2>Belajar Web Dari NOL</h2>
+          <p>Mulai Bangun Website Pertamamu Hari ini.</p>
+          <p>
+            Belajar HTML &amp; CSS melalui workshop praktis untuk mahasiswa.
+          </p>
+          <a class="btn" href="#kontak">Daftar Workshop</a>
+        </header>
+
+        <img
+          src="assets/ilustration.png"
+          alt="Ilustrasi Belajar web"
+          class="hero-img"
+        />
+      </section>
+
+      <section id="learning" class="learning">
+        <h2>Apa yang kamu Pelajari?</h2>
+        <ul>
+          <li>Belajar HTML &amp; CSS</li>
+          <li>Membuat Website Pertama</li>
+          <li>Belajar Dasar Web Design</li>
+        </ul>
+      </section>
+
+      <section id="features" class="features">
+        <h2>Kenapa WebStarter?</h2>
+
+        <ul class="filter" id="filter-fitur" aria-label="Filter kategori fitur">
+          <li>
+            <button
+              class="tombol-filter"
+              type="button"
+              data-kategori="Semua"
+              aria-pressed="true"
+            >
+              Semua
+            </button>
+          </li>
+          <li>
+            <button
+              class="tombol-filter"
+              type="button"
+              data-kategori="Materi"
+              aria-pressed="false"
+            >
+              Materi
+            </button>
+          </li>
+          <li>
+            <button
+              class="tombol-filter"
+              type="button"
+              data-kategori="Praktik"
+              aria-pressed="false"
+            >
+              Praktik
+            </button>
+          </li>
+          <li>
+            <button
+              class="tombol-filter"
+              type="button"
+              data-kategori="Karier"
+              aria-pressed="false"
+            >
+              Karier
+            </button>
+          </li>
+        </ul>
+
+        <p id="status-fitur" class="status" role="status"></p>
+        <p id="pesan-fitur-kosong" class="kosong" hidden>
+          Tidak ada fitur pada kategori ini.
+        </p>
+
+        <ul id="daftar-fitur" class="daftar-fitur"></ul>
+      </section>
+
+      <section id="faq" class="faq">
+        <h2>Pertanyaan yang Sering Diajukan</h2>
+
+        <ul class="daftar-faq" id="daftar-faq">
+          <li class="item-faq">
+            <h3>
+              <button
+                class="tombol-faq"
+                type="button"
+                aria-expanded="false"
+                aria-controls="jawaban-1"
+              >
+                Apakah perlu pengalaman coding sebelumnya?
+                <span class="ikon-faq" aria-hidden="true"></span>
+              </button>
+            </h3>
+            <p class="jawaban-faq" id="jawaban-1" hidden>
+              Tidak perlu. Workshop ini dimulai dari nol, termasuk cara memasang
+              editor dan menjalankan halaman pertama.
+            </p>
+          </li>
+
+          <li class="item-faq">
+            <h3>
+              <button
+                class="tombol-faq"
+                type="button"
+                aria-expanded="false"
+                aria-controls="jawaban-2"
+              >
+                Apa saja yang harus disiapkan sebelum ikut?
+                <span class="ikon-faq" aria-hidden="true"></span>
+              </button>
+            </h3>
+            <p class="jawaban-faq" id="jawaban-2" hidden>
+              Cukup laptop, koneksi internet, dan editor teks. Semua perangkat
+              lunak yang dipakai bersifat gratis.
+            </p>
+          </li>
+
+          <li class="item-faq">
+            <h3>
+              <button
+                class="tombol-faq"
+                type="button"
+                aria-expanded="false"
+                aria-controls="jawaban-3"
+              >
+                Berapa lama satu sesi workshop berlangsung?
+                <span class="ikon-faq" aria-hidden="true"></span>
+              </button>
+            </h3>
+            <p class="jawaban-faq" id="jawaban-3" hidden>
+              Satu sesi berlangsung 120 menit, dengan 40 menit terakhir khusus
+              untuk latihan terbimbing dan tanya jawab.
+            </p>
+          </li>
+
+          <li class="item-faq">
+            <h3>
+              <button
+                class="tombol-faq"
+                type="button"
+                aria-expanded="false"
+                aria-controls="jawaban-4"
+              >
+                Apakah peserta mendapat sertifikat?
+                <span class="ikon-faq" aria-hidden="true"></span>
+              </button>
+            </h3>
+            <p class="jawaban-faq" id="jawaban-4" hidden>
+              Ya. Sertifikat diberikan setelah peserta menyelesaikan proyek
+              akhir dan mengumpulkannya lewat tautan yang dibagikan di akhir
+              sesi.
+            </p>
+          </li>
+
+          <li class="item-faq">
+            <h3>
+              <button
+                class="tombol-faq"
+                type="button"
+                aria-expanded="false"
+                aria-controls="jawaban-5"
+              >
+                Bagaimana kalau saya tertinggal materi?
+                <span class="ikon-faq" aria-hidden="true"></span>
+              </button>
+            </h3>
+            <p class="jawaban-faq" id="jawaban-5" hidden>
+              Rekaman sesi dan berkas latihan dibagikan setelah kelas, dan kamu
+              bisa ikut sesi tanya mentor untuk mengejar ketertinggalan.
+            </p>
+          </li>
+        </ul>
+      </section>
+
+      <section id="kontak" class="kontak">
+        <h2>Daftar Workshop</h2>
+        <p class="catatan-kontak">
+          Isi data di bawah ini, lalu kami hubungi lewat email untuk konfirmasi
+          jadwal.
+        </p>
+
+        <form id="form-kontak" class="form-kontak" novalidate>
+          <label for="nama">Nama lengkap</label>
+          <input
+            id="nama"
+            name="nama"
+            type="text"
+            autocomplete="name"
+            placeholder="Contoh: Budi Santoso"
+            aria-describedby="error-nama"
+          />
+          <p id="error-nama" class="error" role="alert"></p>
+
+          <label for="email">Email</label>
+          <input
+            id="email"
+            name="email"
+            type="email"
+            autocomplete="email"
+            placeholder="nama@student.polban.ac.id"
+            aria-describedby="error-email"
+          />
+          <p id="error-email" class="error" role="alert"></p>
+
+          <label for="minat">Minat</label>
+          <select id="minat" name="minat" aria-describedby="error-minat">
+            <option value="">Pilih minat</option>
+            <option value="Materi">Materi</option>
+            <option value="Praktik">Praktik</option>
+            <option value="Karier">Karier</option>
+          </select>
+          <p id="error-minat" class="error" role="alert"></p>
+
+          <label for="pesan">Pesan</label>
+          <textarea
+            id="pesan"
+            name="pesan"
+            rows="4"
+            placeholder="Ceritakan jadwal yang kamu harapkan atau pertanyaanmu."
+            aria-describedby="error-pesan"
+          ></textarea>
+          <p id="error-pesan" class="error" role="alert"></p>
+
+          <label class="label-setuju" for="setuju">
+            <input
+              id="setuju"
+              name="setuju"
+              type="checkbox"
+              aria-describedby="error-setuju"
+            />
+            <span>Saya setuju dihubungi lewat email soal jadwal workshop.</span>
+          </label>
+          <p id="error-setuju" class="error" role="alert"></p>
+
+          <button class="btn btn-kirim" type="submit">Kirim pendaftaran</button>
+
+          <p id="pesan-sukses" class="sukses" role="status" hidden></p>
+        </form>
+      </section>
+
+      <section id="cta" class="cta">
+        <h2>Siap membuat website pertamamu?</h2>
+        <a class="btn" href="#kontak">Daftar Sekarang</a>
+      </section>
+    </main>
+
+    <footer class="container">
+      <p>WebStarter &copy; 2026</p>
+    </footer>
+
+    <button id="tombol-atas" class="tombol tombol-atas" type="button" hidden>
+      Kembali ke atas
+    </button>
+
+    <script src="js/app.js" defer></script>
+  </body>
+</html>
